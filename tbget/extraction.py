@@ -22,8 +22,8 @@ class FrameHeaderToken(object):
 
     QUOTES_RE_STRING = "(%s)" % "|".join(u"\"''\u201C\u201D\u2018\u201D")
     PATH_CLEAN_RE = regex.compile(ur"""
-        ^\s*\\*\s*{quotes}|   # Quote at the beginning
-        \\*\s*{quotes}\s*$|  # Quote at the end
+        ^\s*[\\\s]*\s*{quotes}|   # Quote at the beginning
+        [\\\s]*\s*{quotes}\s*$|  # Quote at the end
         [\r\n]                  # Newlines
     """.format(quotes=QUOTES_RE_STRING), regex.VERBOSE | regex.UNICODE)
 
