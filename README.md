@@ -1,6 +1,8 @@
 # tbget
 
-A tool for extracting tracebacks from tangled error output. Here's an example traceback that has been encoded and word wrapped in a few ways before it got to me (I've actually cut most of the stack frames to keep it short).
+`tbget` is a simple tool for extracting tracebacks from any text.
+
+Here's an example traceback that has been encoded and word wrapped in a few ways before it got to me (I've actually cut most of the stack frames to keep it short).
 
 ```
 '{"test_data": "{\\"data\\": \\"$ tools/runtests.py \\\\nRUNNING ALL SORTS OF
