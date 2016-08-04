@@ -1,8 +1,12 @@
 # tbget
 
-`tbget` is a simple tool for extracting tracebacks from any text.
+`tbget` is a tool for extracting tracebacks from garbled text.
 
-Here's an example traceback that has been encoded and word wrapped in a few ways before it got to me (I've actually cut most of the stack frames to keep it short).
+Install with `pip install tbget` or `git clone https://github.com/brownhead/tbget.git && cd ./tbget && pip install -e .` if you want the latest release, and to be able to hack on the tool.
+
+## Example Usage
+
+Here's a JSON'd, `repr`'d, and shoved-through-a-word-doc'd traceback:
 
 ```
 '{"test_data": "{\\"data\\": \\"$ tools/runtests.py \\\\nRUNNING ALL SORTS OF
@@ -17,7 +21,7 @@ __len__(self):\\\\nKeyboardInterrupt\\\\n$\\\\n\\", \\"type\\":
 \\"traceback\\"}", "test_result": "aborted"}'
 ```
 
-If I run that through `tbget`, I get this:
+After running it through `tbget`:
 
 ```pytb
 Traceback (most recent call last):
@@ -31,6 +35,4 @@ KeyboardInterrupt\\\\n$\\\\n\\", \\"type\\":
 \\"traceback\\"}", "test_result": "aborted"}'
 ```
 
-Much more readable!!
-
-For those curious about the extra nonsense at the end... Unfortunately figuring out when the exception's message ends is seemingly impossible, so the tool just prints out 100 characters after the last stack frame.
+*(Because the traceback's end can't be accurately determined by my tool's general strategy, 100 characters after the last stack frame are printed)*
