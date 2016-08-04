@@ -1,0 +1,56 @@
+(khan27)jyggalag:webapp johnsullivan$ tools/devshell.py 
+^CTraceback (most recent call last):
+  File "tools/devshell.py", line 145, in <module>
+    from devshell_eval import *
+  File "/Users/johnsullivan/khan/webapp/tools/devshell_eval.py", line 4, in <module>
+    from assessment_items.models import *
+  File "/Users/johnsullivan/khan/webapp/assessment_items/models.py", line 16, in <module>
+    import api.jsonify
+  File "/Users/johnsullivan/khan/webapp/api/jsonify.py", line 21, in <module>
+    import frozen_model
+  File "/Users/johnsullivan/khan/webapp/frozen_model.py", line 16, in <module>
+    import content.models
+  File "/Users/johnsullivan/khan/webapp/content/models.py", line 77, in <module>
+    from intl import i18n
+  File "/Users/johnsullivan/khan/webapp/intl/i18n.py", line 43, in <module>
+    import intl.models
+  File "/Users/johnsullivan/khan/webapp/intl/models.py", line 16, in <module>
+    import intl.crowdin
+  File "/Users/johnsullivan/khan/webapp/intl/crowdin.py", line 15, in <module>
+    import intl.translate
+  File "/Users/johnsullivan/khan/webapp/intl/translate.py", line 57, in <module>
+    import event_log
+  File "/Users/johnsullivan/khan/webapp/event_log.py", line 107, in <module>
+    from logging_tools import ua_logic
+  File "/Users/johnsullivan/khan/webapp/logging_tools/ua_logic.py", line 6, in <module>
+    from third_party import user_agents
+  File "/Users/johnsullivan/khan/webapp/third_party/__init__.py", line 137, in load_module
+    __import__(short_module_name)
+  File "/Users/johnsullivan/khan/webapp/third_party/user_agents/__init__.py", line 3, in <module>
+    from .parsers import parse
+  File "/Users/johnsullivan/khan/webapp/third_party/user_agents/parsers.py", line 4, in <module>
+    from ua_parser import user_agent_parser
+  File "/Users/johnsullivan/khan/webapp/third_party/ua_parser/user_agent_parser.py", line 484, in <module>
+    _v2_replacement))
+  File "/Users/johnsullivan/khan/webapp/third_party/ua_parser/user_agent_parser.py", line 46, in __init__
+    self.user_agent_re = re.compile(self.pattern)
+  File "/Users/johnsullivan/.virtualenv/khan27/lib/python2.7/re.py", line 190, in compile
+    return _compile(pattern, flags)
+  File "/Users/johnsullivan/.virtualenv/khan27/lib/python2.7/re.py", line 242, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/Users/johnsullivan/.virtualenv/khan27/lib/python2.7/sre_compile.py", line 498, in compile
+    p = sre_parse.parse(p, flags)
+  File "/Users/johnsullivan/.virtualenv/khan27/lib/python2.7/sre_parse.py", line 687, in parse
+    p = _parse_sub(source, pattern, 0)
+  File "/Users/johnsullivan/.virtualenv/khan27/lib/python2.7/sre_parse.py", line 308, in _parse_sub
+    itemsappend(_parse(source, state))
+  File "/Users/johnsullivan/.virtualenv/khan27/lib/python2.7/sre_parse.py", line 647, in _parse
+    p = _parse_sub(source, state)
+  File "/Users/johnsullivan/.virtualenv/khan27/lib/python2.7/sre_parse.py", line 308, in _parse_sub
+    itemsappend(_parse(source, state))
+  File "/Users/johnsullivan/.virtualenv/khan27/lib/python2.7/sre_parse.py", line 512, in _parse
+    if subpattern:
+  File "/Users/johnsullivan/.virtualenv/khan27/lib/python2.7/sre_parse.py", line 126, in __len__
+    def __len__(self):
+KeyboardInterrupt
+(khan27)jyggalag:webapp johnsullivan$ 
