@@ -5,10 +5,12 @@ from .convenience import extract_traceback
 
 def parse_args(argv=sys.argv):
 	parser = argparse.ArgumentParser(
-		description="Extracts Python tracebacks from anywhere.")
+		description="Extracts Python tracebacks from garbled text.")
 	parser.add_argument("file", default="-", nargs="?",
-						help="File to extract TB from (default: %(default)s")
-	parser.add_argument("--run-tests", action="store_true")
+						help="File to extract TB from (will default to "
+						     "reading from standard input).")
+	parser.add_argument("--run-tests", action="store_true",
+						help="Runs the test suite.")
 
 	return parser.parse_args()
 
