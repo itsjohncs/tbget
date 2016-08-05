@@ -2,7 +2,7 @@
 
 `tbget` is a tool for extracting tracebacks from garbled text.
 
-Install with `pip install git+https://github.com/brownhead/tbget.git`.
+Install with `pip install git+https://github.com/brownhead/tbget.git`, run it with `tbget -h`.
 
 ## Example Usage
 
